@@ -22,8 +22,8 @@ class StudentWorkflowJUnitTest {
         assertEquals("Pass",StudentApp.result(40));
     }
     @Test void escapesUserContent() {
-        assertEquals("&lt;script&gt;",StudentApp.esc("<script>"));
-        assertEquals("&amp;",StudentApp.esc("&"));
+        assertEquals("&lt;script&gt;",Frontend.esc("<script>"));
+        assertEquals("&amp;",Frontend.esc("&"));
     }
     @Test void parsesFormEncoding() {
         assertEquals("Two Words",StudentApp.params("name=Two+Words").get("name"));

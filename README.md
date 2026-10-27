@@ -16,7 +16,8 @@ Open http://127.0.0.1:8188
 Default local demonstration login: admin / Demo123! (set STUDENT_ADMIN_USER and STUDENT_ADMIN_PASS to override).
 
 ## Layout
-- `src/main/java/StudentApp.java` — application
+- `src/main/java/Frontend.java` — frontend: HTML, CSS, forms, subject selectors, and tables
+- `src/main/java/StudentApp.java` — backend: HTTP server, authentication, validation, records, and file storage
 - `testing/` — JUnit 5 tests
 - `pom.xml` — Maven build configuration
 - `.github/workflows/java-tests.yml` — automated JUnit checks
