@@ -1,6 +1,5 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import java.nio.file.*;
 
 class StudentWorkflowJUnitTest {
     @Test void rejectsBadStudentNames() {
@@ -20,10 +19,6 @@ class StudentWorkflowJUnitTest {
         assertEquals("Pending",StudentApp.result(null));
         assertEquals("Fail",StudentApp.result(39));
         assertEquals("Pass",StudentApp.result(40));
-    }
-    @Test void escapesUserContent() {
-        assertEquals("&lt;script&gt;",Frontend.esc("<script>"));
-        assertEquals("&amp;",Frontend.esc("&"));
     }
     @Test void parsesFormEncoding() {
         assertEquals("Two Words",StudentApp.params("name=Two+Words").get("name"));

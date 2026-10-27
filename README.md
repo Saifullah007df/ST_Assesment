@@ -23,3 +23,10 @@ Default local demonstration login: admin / Demo123! (set STUDENT_ADMIN_USER and 
 - `.github/workflows/java-tests.yml` — automated JUnit checks
 
 This is a local educational demonstration, not production-grade identity or student-data software.
+
+## Test coverage
+Run `mvn test` for 27 tests across four classes:
+- `StudentAppJUnitTest`: backend validation and calculation boundaries.
+- `StudentWorkflowJUnitTest`: identifiers, names, form parsing, and result rules.
+- `FrontendJUnitTest`: escaped HTML, navigation, subject selection, forms, and report rendering.
+- `BackendIntegrationTest`: real HTTP authentication, CSRF, validation, subject filtering, enrollment removal, and persistence across server restart. These tests launch isolated server processes and use temporary storage, leaving demo records untouched.
